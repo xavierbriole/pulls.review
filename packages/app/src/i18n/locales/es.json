@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "Plegar o desplegar grupo",
+    "resizeFiles": "Redimensionar la lista de archivos (doble clic para restablecer)",
     "filesReviewed": "{reviewed} / {total} archivos revisados",
     "subgroupsOf": "subgrupos de",
     "hideSubgroups": "Ocultar subgrupos",

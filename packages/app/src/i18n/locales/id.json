@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "Buka/tutup grup",
+    "resizeFiles": "Ubah ukuran daftar berkas (klik dua kali untuk mengatur ulang)",
     "filesReviewed": "{reviewed} / {total} berkas ditinjau",
     "subgroupsOf": "subgrup dari",
     "hideSubgroups": "Sembunyikan subgrup",

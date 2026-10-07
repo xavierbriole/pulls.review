@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "Toggle group",
+    "resizeFiles": "Resize file list (double-click to reset)",
     "filesReviewed": "{reviewed} / {total} files reviewed",
     "subgroupsOf": "subgroups of",
     "hideSubgroups": "Hide subgroups",

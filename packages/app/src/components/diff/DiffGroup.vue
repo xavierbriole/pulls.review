@@ -8,7 +8,7 @@ import { Markdown } from '@comark/vue'
 import { computed, nextTick, ref } from 'vue'
 import { scrollToFile } from '../../composables/scrollToFile'
 import { useFitText } from '../../composables/useFitText'
-import { fileListLayout } from '../../state/file-list'
+import { fileListColumn, fileListLayout, fileListWidth } from '../../state/file-list'
 import { showGroupSidebar } from '../../state/group-nav'
 import CriticalMark from './CriticalMark.vue'
 import DiffGroup from './DiffGroup.vue'
@@ -149,10 +149,16 @@ function navigateToFile(sha: string) {
       </template>
     </header>
 
-    <div v-if="!isChapter || (!collapsed && group.files.length)" class="flex flex-col gap-4 p-3 lg:grid lg:grid-cols-[1fr_4fr]">
+    <!-- A dragged width (fileListWidth) replaces the proportional columns; the inline style only takes effect once `lg:grid` applies.
+         DiffsPage's FileListResizeHandle computes its position from this row's padding, gap and columns. -->
+    <div
+      v-if="!isChapter || (!collapsed && group.files.length)"
+      class="flex flex-col gap-4 p-3 lg:grid lg:grid-cols-[1fr_4fr]"
+      :style="fileListWidth ? { gridTemplateColumns: `${fileListColumn(fileListWidth)} minmax(0, 1fr)` } : undefined"
+    >
       <!-- --diffs-header-height is the page's real, measured sticky DiffsHeader height
            (set on the DiffsPage root), so the aside sticks just below it, not under it. -->
-      <aside class="top-[calc(var(--diffs-header-height)+10px)] min-w-70 flex shrink-0 flex-col gap-3 lg:sticky lg:max-h-[calc(100vh-var(--diffs-header-height)-20px)] lg:self-start">
+      <aside :class="fileListWidth ? '' : 'min-w-70'" class="top-[calc(var(--diffs-header-height)+10px)] flex shrink-0 flex-col gap-3 lg:sticky lg:max-h-[calc(100vh-var(--diffs-header-height)-20px)] lg:self-start">
         <header v-if="!isChapter" class="w-full flex flex-col bg-base">
           <button
             v-if="parentLabel"

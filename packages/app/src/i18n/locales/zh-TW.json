@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "展開/折疊群組",
+    "resizeFiles": "調整檔案列表寬度（雙擊重設）",
     "filesReviewed": "已審閱 {reviewed} / {total} 個檔案",
     "subgroupsOf": "子群組，屬於",
     "hideSubgroups": "隱藏子群組",

@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "グループを開閉",
+    "resizeFiles": "ファイル一覧の幅を変更（ダブルクリックでリセット）",
     "filesReviewed": "{reviewed} / {total} ファイルをレビュー済み",
     "subgroupsOf": "サブグループ：",
     "hideSubgroups": "サブグループを隠す",

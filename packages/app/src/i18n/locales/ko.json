@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "그룹 접기/펼치기",
+    "resizeFiles": "파일 목록 크기 조절 (더블 클릭하여 초기화)",
     "filesReviewed": "파일 {reviewed} / {total}개 리뷰 완료",
     "subgroupsOf": "하위 그룹:",
     "hideSubgroups": "하위 그룹 숨기기",

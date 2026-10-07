@@ -16,6 +16,7 @@ import DiffGroup from './DiffGroup.vue'
 import DiffGroupSidebar from './DiffGroupSidebar.vue'
 import DiffsHeader from './DiffsHeader.vue'
 import { fileCollapseKey } from './file-collapse'
+import FileListResizeHandle from './FileListResizeHandle.vue'
 import ReviewSummaries from './ReviewSummaries.vue'
 import SharedAnalysisBanner from './SharedAnalysisBanner.vue'
 
@@ -228,15 +229,19 @@ function refreshFromBanner() {
               <Markdown :value="grouped?.overallSummary" class="border-b border-base px-4 pb-2 text-sm op-fade" />
             </Suspense>
 
-            <DiffGroup
-              v-for="group in groups"
-              :key="group.key"
-              :store="store!"
-              :group="group"
-              :collapsed="collapsedGroups.has(group.key)"
-              :files-visible="filesVisible"
-              @toggle="toggleGroup(group.key)"
-            />
+            <!-- One resize handle spans every group, so all file columns resize together. -->
+            <div class="relative flex flex-col gap-4">
+              <DiffGroup
+                v-for="group in groups"
+                :key="group.key"
+                :store="store!"
+                :group="group"
+                :collapsed="collapsedGroups.has(group.key)"
+                :files-visible="filesVisible"
+                @toggle="toggleGroup(group.key)"
+              />
+              <FileListResizeHandle />
+            </div>
 
             <!-- To leave some space at the end of the diff -->
             <div class="mt-200 p2 text-center text-xs italic op50">

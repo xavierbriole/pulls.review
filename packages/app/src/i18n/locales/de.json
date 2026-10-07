@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "Gruppe ein-/ausklappen",
+    "resizeFiles": "Dateiliste anpassen (Doppelklick zum Zurücksetzen)",
     "filesReviewed": "{reviewed} / {total} Dateien reviewt",
     "subgroupsOf": "Untergruppen von",
     "hideSubgroups": "Untergruppen ausblenden",

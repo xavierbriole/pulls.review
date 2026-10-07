@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "Expandir ou recolher grupo",
+    "resizeFiles": "Redimensionar a lista de arquivos (clique duplo para redefinir)",
     "filesReviewed": "{reviewed} / {total} arquivos revisados",
     "subgroupsOf": "subgrupos de",
     "hideSubgroups": "Ocultar subgrupos",

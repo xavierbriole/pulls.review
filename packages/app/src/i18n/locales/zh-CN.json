@@ -206,6 +206,7 @@
   },
   "group": {
     "toggle": "展开/折叠分组",
+    "resizeFiles": "调整文件列表宽度（双击重置）",
     "filesReviewed": "已审阅 {reviewed} / {total} 个文件",
     "subgroupsOf": "子组，属于",
     "hideSubgroups": "隐藏子组",
